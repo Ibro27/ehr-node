@@ -1,0 +1,45 @@
+import { Schema, model } from "mongoose";
+
+const demographicsSchema = Schema({
+  patientId: {
+    type: Schema.Types.ObjectId,
+    ref: "Patient",
+    required: [true, "Please Enter the Patient Id"],
+  },
+  firstName: String,
+  lastName: String,
+  city: String,
+  state: String,
+  dob: String,
+  gender: String,
+  zipCode: String,
+  phone: String,
+  email: String,
+  bestFormContact: String,
+  leaveVoiceMessage: Boolean,
+  prefferedPharmacy: String,
+  address: String,
+  apt: String,
+  emergencyContact: String,
+  relationship: String,
+  howHeardAbtClinic: String,
+  finFirstName: String,
+  finLastName: String,
+  finCity: String,
+  finState: String,
+  finZipcode: String,
+  finRelationship: Boolean,
+  finAddress: String,
+  finApt: String,
+  finHomePhone: String,
+  finCellPhone: String,
+  finNameOfPry: String,
+  finNameOfSec: String,
+  finPrySubNo: String,
+  finSecSubNo: String,
+  finParentSign: String,
+  finDate: String,
+});
+
+const Demographics = new model("Demographics", demographicsSchema);
+export { Demographics };
